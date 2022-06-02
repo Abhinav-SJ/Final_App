@@ -5,7 +5,7 @@ from sklearn import metrics
 from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier
 
-df = pd.read_csv('C:/Users/hp/Desktop/Final_App/datasets/Crop_recommendation.csv')
+df = pd.read_csv('datasets/Crop_recommendation.csv')
 
 features = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
 target = df['label']
@@ -22,7 +22,7 @@ x = metrics.accuracy_score(Ytest, predicted_values)
 print("RF's Accuracy is: ", x)
 
 import pickle
-RF_pkl_filename = 'C:/Users/hp/Desktop/Final_App/models/RandomForest.pkl'
+RF_pkl_filename = 'models/RandomForest.pkl'
 RF_Model_pkl = open(RF_pkl_filename, 'wb')
 pickle.dump(RF, RF_Model_pkl)
 RF_Model_pkl.close()
