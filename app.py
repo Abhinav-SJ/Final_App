@@ -5,7 +5,7 @@ import pickle
 import requests
 import io
 
-crop_recommendation_model_path = 'models/RandomForest.pkl'
+crop_recommendation_model_path = 'C:/Users/hp/Desktop/Final_App/models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
 
 app = Flask(__name__)
@@ -47,3 +47,5 @@ def crop_recommend():
         else:
             return jsonify({'label':'Data not available'})
 
+if __name__ == '__main__':
+    app.run(debug=False)
