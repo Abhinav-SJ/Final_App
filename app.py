@@ -49,7 +49,7 @@ def crop_recommend():
 
             return jsonify({'label':str(final_prediction)})
         else:
-            return jsonify({'label':'Data not available'})
+            return "Data not available"
 
 if __name__ == '__main__':
     app.run(debug=False)
