@@ -8,8 +8,6 @@ import io
 crop_recommendation_model_path = 'C:/Users/hp/Desktop/Final_App/models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
 
-app = Flask(__name__)
-
 def weather_fetch(city_name):
     api_key = config.weather_api_key
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -26,6 +24,12 @@ def weather_fetch(city_name):
         return temperature, humidity
     else:
         return None
+
+app = Flask(__name__)
+
+@ app.route('/')
+def home():
+    return "Hello world"
 
 @ app.route('/crop_recommend', methods=['POST'])
 def crop_recommend():
