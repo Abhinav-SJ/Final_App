@@ -5,7 +5,7 @@ import pickle
 import requests
 import io
 
-crop_recommendation_model_path = 'C:/Users/hp/Desktop/Final_App/models/RandomForest.pkl'
+crop_recommendation_model_path = 'models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
 
 def weather_fetch(city_name):
