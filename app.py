@@ -52,4 +52,4 @@ def crop_recommend():
             return "Data not available"
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
