@@ -31,7 +31,7 @@ app = Flask(__name__)
 def home():
     return "Hello world"
 
-@ app.route('/crop_recommend', methods=['POST'])
+@ app.route('/crop-recommend', methods=['POST'])
 def crop_recommend():
     if request.method == 'POST':
         N = int(request.form['nitrogen'])
